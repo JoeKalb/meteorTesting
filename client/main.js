@@ -22,6 +22,14 @@ Template.body.helpers({
   }
 });
 
+Template.registerHelper('currentTime', () =>{
+  return moment().format('h:mm:ss a');
+});
+
+Template.registerHelper('formatedDate', (date) =>{
+  return moment(date).format('MMMM Do YYYY, h:mm:ss a');
+});
+
 Template.add.events({
   'submit .add-form': function(){
     event.preventDefault();

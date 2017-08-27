@@ -16,6 +16,7 @@
             </li>
           {{/if}}
           <li class="nav-item">{{> loginButtons}}</li>
+          <li>{{currentTime}}</li>
         </ul>
       </div>
     </div>
@@ -44,7 +45,7 @@
 
 <template name="note">
   <li class="collection-item">
-    {{text}}: <strong>Added by {{username}}</strong>
+    {{text}}: <strong>Added by {{username}} at {{formatedDate createdAt}}</strong>
     <a href="#" class="delete-note secondary-content"><i class="material-icons">close</i></a>
   </li>
 </template>
