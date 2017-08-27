@@ -1,3 +1,4 @@
+//import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Notes } from '../lib/collections.js';
 import { Accounts } from 'meteor/accounts-base';
@@ -25,6 +26,10 @@ Template.body.helpers({
 Template.registerHelper('currentTime', () =>{
   return moment().format('h:mm:ss a');
 });
+
+Meteor.setInterval(function() {
+  console.log(moment().format('h:mm:ss a'));
+}, 1000);
 
 Template.registerHelper('formatedDate', (date) =>{
   return moment(date).format('MMMM Do YYYY, h:mm:ss a');

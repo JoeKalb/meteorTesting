@@ -16,7 +16,6 @@
             </li>
           {{/if}}
           <li class="nav-item">{{> loginButtons}}</li>
-          <li>{{currentTime}}</li>
         </ul>
       </div>
     </div>
@@ -33,7 +32,9 @@
         <p>Please log in to manage notes</p>
     {{/if}}
   </div>
-
+  <div class="container">
+    {{currentTime}}
+  </div>
   {{> add}}
 
   <script>
@@ -58,5 +59,11 @@
         <input type="text" name="text" placeholder="Add note...">
       </form>
     </div>
+  </div>
+</template>
+
+<template name="clock">
+  <div id="clock">
+
   </div>
 </template>
