@@ -28,7 +28,8 @@ Template.registerHelper('currentTime', () =>{
 });
 
 Meteor.setInterval(function() {
-  console.log(moment().format('h:mm:ss a'));
+  let tick = document.getElementById("tick");
+  tick.innerHTML = moment().format('h:mm:ss a');
 }, 1000);
 
 Template.registerHelper('formatedDate', (date) =>{
